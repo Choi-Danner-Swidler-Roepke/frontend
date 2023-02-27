@@ -1,7 +1,7 @@
 export const BCPage: React.FC = () => {
     return (
         <div>
-            Browse Classses Page
+            Browse Classes Page
         </div>
     )
 }
