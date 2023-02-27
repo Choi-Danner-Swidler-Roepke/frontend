@@ -1,14 +1,14 @@
-import { classes } from "./fakeData"
 import { Table } from "./Table"
+import { useGetAllClasses } from "../useClasses"
 
 export const BCPage: React.FC = () => {
-
-    console.log(classes)
-    // classes will be fetched here and passed to Table
+    const {data, isLoading, isError} = useGetAllClasses()
 
     return (
-        <div className="bg-slate-300 flex justify-center items-center h-full w-full">
-            <Table data={classes} />
+        <div id="content-wrapper" className="h-full w-full flex justify-center items-center">
+            <div className="bg-slate-300 flex justify-center items-center h-5/6 w-5/6">
+                <Table data={data} />
+            </div>
         </div>
     )
 }
