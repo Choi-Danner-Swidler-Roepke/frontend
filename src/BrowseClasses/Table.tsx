@@ -1,6 +1,6 @@
 import { useTable, Column } from 'react-table'
 import { useMemo } from "react"
-import { ClassData } from "./fakeData"
+import { ClassData } from '../Types'
 
 interface TableProps {
     data: ClassData[]
@@ -19,12 +19,12 @@ export const Table: React.FC<TableProps> = ({data}) => {
                 accessor: 'subject'
             },
             {
-                Header: 'Course Number',
-                accessor: 'course'
-            },
-            {
                 Header: 'Title',
                 accessor: 'title'
+            },
+            {
+                Header: 'Course Number',
+                accessor: 'course'
             },
             {
                 Header: 'Days',
@@ -47,7 +47,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
    } = useTable({ columns, data })
 
 return (
-     <table {...getTableProps()} className="bg-blue-200 shadow-xl rounded-lg">
+     <table {...getTableProps()} className="bg-blue-200 shadow-xl rounded-lg w-full h-full">
        <thead>
          {headerGroups.map(headerGroup => (
            <tr {...headerGroup.getHeaderGroupProps()}>
