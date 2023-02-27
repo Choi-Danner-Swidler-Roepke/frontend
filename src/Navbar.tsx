@@ -14,6 +14,7 @@ export const Navbar: React.FC = () => {
         { title: "Major Requirements ",         src: "Chart_fill",  link: "/major-requirements" },
       ];
     return (
+
     <div className="flex">
       <div
         className={` ${
