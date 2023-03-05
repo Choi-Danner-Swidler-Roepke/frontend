@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
         />
         <div className="flex gap-x-4 items-center">
             <img
-                src="./src/assets/logo.png"
+                src="./src/assets/new_logo.png"
                 className={`duration-500 ${
                     open && "rotate-[360deg]"
                 }`}
