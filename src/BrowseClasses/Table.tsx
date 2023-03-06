@@ -1,4 +1,4 @@
-import { useTable, Column } from 'react-table'
+import { useTable, Column, useSortBy } from 'react-table'
 import { useMemo } from "react"
 import { ClassData } from '../Types'
 
@@ -10,30 +10,12 @@ export const Table: React.FC<TableProps> = ({data}) => {
     
     const columns: Column[] = useMemo(
         () => [
-            {
-                Header: 'CRN',
-                accessor: 'crn'
-            },
-            {
-                Header: 'Subject',
-                accessor: 'subject'
-            },
-            {
-                Header: 'Title',
-                accessor: 'title'
-            },
-            {
-                Header: 'Course Number',
-                accessor: 'course'
-            },
-            {
-                Header: 'Days',
-                accessor: 'days'
-            },
-            {
-                Header: 'Instructor',
-                accessor: 'instructor'
-            }
+            { Header: 'CRN',            accessor: 'crn'         },
+            { Header: 'Subject',        accessor: 'subject'     },
+            { Header: 'Title',          accessor: 'title'       },
+            { Header: 'Course Number',  accessor: 'course'      },
+            { Header: 'Days',           accessor: 'days'        },
+            { Header: 'Instructor',     accessor: 'instructor'  }
         ],
         []
     )
@@ -44,7 +26,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
      headerGroups,
      rows,
      prepareRow,
-   } = useTable({ columns, data })
+   } = useTable({ columns, data }, useSortBy)
 
 return (
      <table {...getTableProps()} className="bg-blue-200 shadow-xl rounded-lg w-full h-full">
@@ -53,10 +35,13 @@ return (
            <tr {...headerGroup.getHeaderGroupProps()}>
              {headerGroup.headers.map(column => (
                <th
-                 {...column.getHeaderProps()}
+                 {...column.getHeaderProps(column.getSortByToggleProps())}
                   className='bg-neutral-200'
                >
                  {column.render('Header')}
+                 <span>
+                  {column.isSorted ? (column.isSortedDesc ? " 🔽" : " 🔼") : "↕️"}
+                 </span>
                </th>
              ))}
            </tr>
