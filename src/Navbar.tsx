@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
         // link: Where you want the button to take you
         { title: "Home",                        src: "User",        link: "/"},
         { title: "Browse Classes",              src: "Calendar",    link: "/browse-classes" },
-        { title: "Registration Information",    src: "Folder",      link: "/",                    gap: true },
+        { title: "Registration Information",    src: "Folder",      link: "/registration-information",     gap: true },
         { title: "Major Requirements ",         src: "Chart_fill",  link: "/major-requirements" },
       ];
     return (
