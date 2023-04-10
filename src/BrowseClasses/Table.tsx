@@ -33,7 +33,7 @@ return (
        <thead>
          {headerGroups.map(headerGroup => (
            <tr {...headerGroup.getHeaderGroupProps()}>
-             {headerGroup.headers.map(column => (
+             {headerGroup.headers.map((column:any) => (
                <th
                  {...column.getHeaderProps(column.getSortByToggleProps())}
                   className='bg-neutral-200'

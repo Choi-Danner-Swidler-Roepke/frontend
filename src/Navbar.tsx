@@ -46,11 +46,11 @@ export const Navbar: React.FC = () => {
         </div>
 
 
-        <ul className="pt-8">
+        <ul className="pt-6">
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex rounded-md p-3 cursor-pointer hover:bg-gray-500 text-gray-300 text-sm items-center gap-x-4 
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-gray-500 text-gray-300 text-sm items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
                 index === 0 && "bg-gray-600"
               } `}
