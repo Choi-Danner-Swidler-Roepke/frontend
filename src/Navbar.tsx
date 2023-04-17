@@ -10,8 +10,9 @@ export const Navbar: React.FC = () => {
         // link: Where you want the button to take you
         { title: "Home",                        src: "User",        link: "/"},
         { title: "Browse Classes",              src: "Calendar",    link: "/browse-classes" },
-        { title: "Registration Information",    src: "Folder",      link: "/",                    gap: true },
-        { title: "Major Requirements ",         src: "Chart_fill",  link: "/major-requirements" },
+        { title: "Registration Information",    src: "Folder",      link: "/registration-information",     gap: true },
+        { title: "Major Requirements",          src: "Chart_fill",  link: "/major-requirements", },
+        { title: "My Schedule",                 src: "",            link: "my-schedule", }
       ];
     return (
 
@@ -46,11 +47,11 @@ export const Navbar: React.FC = () => {
         </div>
 
 
-        <ul className="pt-8">
+        <ul className="pt-6">
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex rounded-md p-3 cursor-pointer hover:bg-gray-500 text-gray-300 text-sm items-center gap-x-4 
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-gray-500 text-gray-300 text-sm items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
                 index === 0 && "bg-gray-600"
               } `}
