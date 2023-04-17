@@ -11,30 +11,12 @@ export const Table: React.FC<TableProps> = ({data}) => {
     // Accessor: Corresponding definition in Types.ts
     const columns: Column[] = useMemo(
         () => [
-            {
-                Header: 'CRN',
-                accessor: 'crn'
-            },
-            {
-                Header: 'Subject',
-                accessor: 'subject'
-            },
-            {
-                Header: 'Title',
-                accessor: 'title'
-            },
-            {
-                Header: 'Course Number',
-                accessor: 'course'
-            },
-            {
-                Header: 'Days',
-                accessor: 'days'
-            },
-            {
-                Header: 'Instructor',
-                accessor: 'instructor'
-            }
+            { Header: 'CRN',            accessor: 'crn'         },
+            { Header: 'Subject',        accessor: 'subject'     },
+            { Header: 'Title',          accessor: 'title'       },
+            { Header: 'Course Number',  accessor: 'course'      },
+            { Header: 'Days',           accessor: 'days'        },
+            { Header: 'Instructor',     accessor: 'instructor'  }
         ],
         []
     )
@@ -53,12 +35,15 @@ return (
        <thead>
          {headerGroups.map(headerGroup => (
            <tr {...headerGroup.getHeaderGroupProps()}>
-             {headerGroup.headers.map(column => (
+             {headerGroup.headers.map((column:any) => (
                <th
-                 {...column.getHeaderProps()}
+                 {...column.getHeaderProps(column.getSortByToggleProps())}
                   className='bg-neutral-200'
                >
                  {column.render('Header')}
+                 <span>
+                  {column.isSorted ? (column.isSortedDesc ? " 🔽" : " 🔼") : "↕️"}
+                 </span>
                </th>
 
 
