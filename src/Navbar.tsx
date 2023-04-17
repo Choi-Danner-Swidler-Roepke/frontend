@@ -11,7 +11,8 @@ export const Navbar: React.FC = () => {
         { title: "Home",                        src: "User",        link: "/"},
         { title: "Browse Classes",              src: "Calendar",    link: "/browse-classes" },
         { title: "Registration Information",    src: "Folder",      link: "/registration-information",     gap: true },
-        { title: "Major Requirements ",         src: "Chart_fill",  link: "/major-requirements" },
+        { title: "Major Requirements",          src: "Chart_fill",  link: "/major-requirements", },
+        { title: "My Schedule",                 src: "",            link: "my-schedule", }
       ];
     return (
 
