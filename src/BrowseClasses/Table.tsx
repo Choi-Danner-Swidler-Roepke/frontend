@@ -24,7 +24,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
             },
             {
                 Header: 'Course Number',
-                accessor: 'course'
+                accessor: 'number'
             },
             {
                 Header: 'Days',
@@ -47,41 +47,44 @@ export const Table: React.FC<TableProps> = ({data}) => {
    } = useTable({ columns, data })
 
 return (
-     <table {...getTableProps()} className="bg-blue-200 shadow-xl rounded-lg w-full h-full">
-       <thead>
-         {headerGroups.map(headerGroup => (
-           <tr {...headerGroup.getHeaderGroupProps()}>
-             {headerGroup.headers.map(column => (
-               <th
-                 {...column.getHeaderProps()}
-                  className='bg-neutral-200'
-               >
-                 {column.render('Header')}
-               </th>
-             ))}
-           </tr>
-         ))}
-       </thead>
-       <tbody {...getTableBodyProps()}>
-         {rows.map(row => {
-           prepareRow(row)
-           return (
-             <tr {...row.getRowProps()} className="bg-neutral-50 hover:bg-neutral-100 border">
-            
-               {row.cells.map(cell => {
-                 return (
-                   <td
-                     {...cell.getCellProps()}
-                     className="border px-2 shadow-xl"
-                   >
-                     {cell.render('Cell')}
-                   </td>
-                 )
-               })}
-             </tr>
-           )
-         })}
-       </tbody>
-     </table>
+     <div className='overflow-y-scroll w-full shadow-2xl'>
+
+      <table {...getTableProps()} className="w-full">
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th
+                  {...column.getHeaderProps()}
+                    className='bg-neutral-200'
+                >
+                  {column.render('Header')}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row)
+            return (
+              <tr {...row.getRowProps()} className="bg-neutral-50 hover:bg-neutral-100 border overflow-auto">
+              
+                {row.cells.map(cell => {
+                  return (
+                    <td
+                      {...cell.getCellProps()}
+                      className="border px-2 shadow-xl"
+                    >
+                      {cell.render('Cell')}
+                    </td>
+                  )
+                })}
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+     </div>
    )
 }
