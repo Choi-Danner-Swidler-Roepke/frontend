@@ -29,8 +29,7 @@ const events = [
 
 export const MSPage: React.FC = () => {
     return (
-        <div className="flex md:flex-row gap-3 pt-5 px-24 flex-wrap
-                        gap-y-10 bg-gray-200 h-0.8 order-1">
+        <div className="flex md:flex-row gap-3 pt-5 px-24 flex-wrap gap-y-10 bg-gray-200 h-0.8 order-1">
             
             {/* This div is the header and subtitle for the page */}
                 <div className="flex h-24 flex-wrap order-2 basis-1/2">

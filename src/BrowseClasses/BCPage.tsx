@@ -26,8 +26,18 @@ export const BCPage: React.FC = () => {
 
 
     return (
-        <div id="content-wrapper" className="h-full w-full flex justify-center items-center">
-            <div className="ml-24 bg-slate-300 flex flex-col justify-center items-center h-5/6 w-5/6">
+        <div id="content-wrapper" className="flex md:flex-row gap-3 pt-5 px-24 flex-wrap gap-y-10 bg-gray-200 h-0.8 order-1">
+            {/* This div is the header and subtitle for the page */}
+                <div className="flex h-24 flex-wrap order-2 basis-1/2">
+                    <h1 className="md:text-5xl text-2xl w-full font-bold md:leading-tight leading-snug text-blue-400">
+                        Browse Classes
+                    </h1>
+                    <h2 className="text-black md:w-2/3 md:py-1 leading-relaxed justify-start">
+                        View and select classes for next semester
+                    </h2>
+                </div> 
+
+            <div className="mx-24 bg-slate-300 flex flex-col justify-center items-center h-5/6 w-5/6 order-3 basis-full">
                 <ControlBar uniqueVals={controlBarVals} params={params} setParams={setParams} />
                 <Table data={fetchedData} />
             </div>
