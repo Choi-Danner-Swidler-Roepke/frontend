@@ -1,4 +1,4 @@
-import { useTable, Column, useSortBy, useSortBy } from 'react-table'
+import { useTable, Column, useSortBy } from 'react-table'
 import { useMemo } from "react"
 import { ClassData } from '../Types'
 
@@ -11,30 +11,12 @@ export const Table: React.FC<TableProps> = ({data}) => {
     // Accessor: Corresponding definition in Types.ts
     const columns: Column[] = useMemo(
         () => [
-            {
-                Header: 'CRN',
-                accessor: 'crn'
-            },
-            {
-                Header: 'Subject',
-                accessor: 'subject'
-            },
-            {
-                Header: 'Title',
-                accessor: 'title'
-            },
-            {
-                Header: 'Course Number',
-                accessor: 'number'
-            },
-            {
-                Header: 'Days',
-                accessor: 'days'
-            },
-            {
-                Header: 'Instructor',
-                accessor: 'instructor'
-            }
+            { Header: 'CRN',            accessor: 'crn'       },
+            { Header: 'Subject',        accessor: 'subject'   },
+            { Header: 'Title',          accessor: 'title'     },
+            { Header: 'Course Number',  accessor: 'number'    },
+            { Header: 'Days',           accessor: 'days'      },
+            { Header: 'Instructor',     accessor: 'instructor'}
         ],
         []
     )

@@ -13,7 +13,7 @@ export const BCPage: React.FC = () => {
         days: [],
         time: [],
         instructor: [],
-        attritbute: []
+        attribute: []
     })
 
 

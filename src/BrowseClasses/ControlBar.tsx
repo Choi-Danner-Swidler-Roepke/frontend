@@ -16,10 +16,10 @@ export const ControlBar: React.FC<TableControlsProps> = ({uniqueVals, params, se
             <ul className="flex justify-around">
                 <SubjectsFilter subjects={uniqueVals.subjects} params={params} setParams={setParams} />
                 <li>Campus</li>
-                <li>days</li>
-                <li>times</li>
-                <li>instructors</li>
-                <li>attritbutes</li>
+                <li>Days</li>
+                <li>Times</li>
+                <li>Instructors</li>
+                <li>Attributes</li>
             </ul>
         </div>
     )

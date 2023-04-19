@@ -19,7 +19,7 @@ interface ClassData {
     xlRemaining: number
     instructor: string
     location: string
-    attritbute?: string
+    attribute?: string
     term: string
 }
 
@@ -45,7 +45,7 @@ interface ClassDataFilter {
     // xlRemaining: number
     instructor: string[]
     // location: string
-    attritbute: string[]
+    attribute: string[]
     // term: string
 }
 
@@ -55,7 +55,7 @@ interface ControlBarUniqueVals {
         days: string[],
         times: string[],
         instructors: string[],
-        attritbutes: string[]
+        attributes: string[]
 }
 // type ClassesData = ClassData[]
 

@@ -7,7 +7,7 @@ function isFilterEmpty(filter: ClassDataFilter) {
         days: [],
         time: [],
         instructor: [],
-        attritbute: []
+        attribute: []
     }
 
     const filterString = JSON.stringify(filter);
@@ -28,7 +28,7 @@ function getUniqueForControlBar(data: ClassData[]): ControlBarUniqueVals {
     const uniqueInstructors = [...new Set( data.map((c: ClassData) => c.instructor) ) ]
     // attributes
     // remove undefined values too since c.attribute is ?
-    const uniqueAttributes = [...new Set( data.map((c: ClassData) => c.attritbute)) ].filter(el => el !== undefined) as string[]
+    const uniqueAttributes = [...new Set( data.map((c: ClassData) => c.attribute)) ].filter(el => el !== undefined) as string[]
 
     return {
         subjects: uniqueSubjects,
@@ -36,7 +36,7 @@ function getUniqueForControlBar(data: ClassData[]): ControlBarUniqueVals {
         days: uniqueDays,
         times: uniqueTimes,
         instructors: uniqueInstructors,
-        attritbutes: uniqueAttributes
+        attributes: uniqueAttributes
     }
 }
 
