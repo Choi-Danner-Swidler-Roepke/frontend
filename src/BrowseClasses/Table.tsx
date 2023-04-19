@@ -1,4 +1,4 @@
-import { useTable, Column } from 'react-table'
+import { useTable, Column, useSortBy, useSortBy } from 'react-table'
 import { useMemo } from "react"
 import { ClassData } from '../Types'
 
@@ -7,7 +7,8 @@ interface TableProps {
 }
 
 export const Table: React.FC<TableProps> = ({data}) => {
-    
+    // Header: Visible label of table columns
+    // Accessor: Corresponding definition in Types.ts
     const columns: Column[] = useMemo(
         () => [
             {
@@ -44,7 +45,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
      headerGroups,
      rows,
      prepareRow,
-   } = useTable({ columns, data })
+   } = useTable({ columns, data }, useSortBy)
 
 return (
      <div className='overflow-y-scroll w-full shadow-2xl'>
