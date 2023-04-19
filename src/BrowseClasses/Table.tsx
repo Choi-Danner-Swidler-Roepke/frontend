@@ -1,4 +1,4 @@
-import { useTable, Column, useSortBy, useSortBy } from 'react-table'
+import { useTable, Column, useSortBy } from 'react-table'
 import { useMemo } from "react"
 import { ClassData } from '../Types'
 
