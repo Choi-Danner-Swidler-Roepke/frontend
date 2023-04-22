@@ -6,19 +6,19 @@ export const Top_Navbar: React.FC = () => {
     // link: Where you want the button to take you
     { title: "Home",                        link: "/"},
     { title: "Classes",                     link: "/browse-classes" },
-    { title: "Registration",                link: "/registration-information" },
     { title: "Majors",                      link: "/major-requirements" },
-    { title: "Schedule",                    link: "/my-schedule"}
+    { title: "Schedule",                    link: "/my-schedule"},
+    { title: "Registration",                link: "/registration-information" },
   ];
   return (
-    <div className='flex justify-between items-center h-24 w-full mx-auto px-4 bg-gray-600 text-white dropshadow-md'>
+    <div className='flex justify-between items-center h-24 w-full mx-auto px-4 bg-gray-700 text-white dropshadow-md'>
       <img src="./src/assets/new_logo.png"/>
-      <h1 className='w-full px-2 text-3xl font-bold text-blue-400'>REGISTRATION APPLICATION.</h1>
+      <h1 className='w-full px-2 text-3xl font-bold text-cyan-600'>REGISTRATION APPLICATION.</h1>
       <ul className='hidden md:flex'>
         {Menus.map((Menu, index) => (
           <li
            key={index}
-           className="p-4 rounded-md hover:bg-gray-500">
+           className="p-4 rounded-md hover:bg-gray-600">
            <span>
               <Link to={Menu.link}>{Menu.title}</Link>
            </span>

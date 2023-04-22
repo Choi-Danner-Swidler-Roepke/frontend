@@ -33,7 +33,7 @@ export const MSPage: React.FC = () => {
             
             {/* This div is the header and subtitle for the page */}
                 <div className="flex h-24 flex-wrap order-2 basis-1/2">
-                    <h1 className="md:text-5xl text-2xl font-bold md:leading-tight leading-snug text-blue-400">
+                    <h1 className="md:text-5xl text-2xl font-bold md:leading-tight leading-snug text-cyan-600">
                         My Schedule
                     </h1>
                     <h2 className="text-black md:w-2/3 md:py-1 leading-relaxed justify-start">

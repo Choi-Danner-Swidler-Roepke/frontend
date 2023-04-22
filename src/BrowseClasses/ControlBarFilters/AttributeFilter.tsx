@@ -9,6 +9,6 @@ interface TableControlsProps {
 export const AttributeFilter: React.FC<TableControlsProps> = ({params, setParams}) => {
 
 
-    return (
+    return (null
     )
 }

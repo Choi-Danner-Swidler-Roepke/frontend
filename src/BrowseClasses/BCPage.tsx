@@ -29,7 +29,7 @@ export const BCPage: React.FC = () => {
         <div id="content-wrapper" className="flex md:flex-row gap-3 pt-5 px-24 flex-wrap gap-y-10 bg-gray-200 h-0.8 order-1">
             {/* This div is the header and subtitle for the page */}
                 <div className="flex h-24 flex-wrap order-2 basis-1/2">
-                    <h1 className="md:text-5xl text-2xl w-full font-bold md:leading-tight leading-snug text-blue-400">
+                    <h1 className="md:text-5xl text-2xl w-full font-bold md:leading-tight leading-snug text-cyan-600">
                         Browse Classes
                     </h1>
                     <h2 className="text-black md:w-2/3 md:py-1 leading-relaxed justify-start">

@@ -5,7 +5,7 @@ export const MRPage: React.FC = () => {
             
             <div className="flex h-24 flex-wrap order-1 basis-1/2">
                 <h1 className="md:text-5xl text-2xl font-bold md:leading-tight
-                leading-snug text-blue-400">
+                leading-snug text-cyan-600">
                     Major Requirements
                 </h1>
                 <h2 className="text-black md:w-2/3 md:py-1 leading-relaxed justify-start">
