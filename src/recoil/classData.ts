@@ -5,3 +5,6 @@ const classState = atom({
   key: "classState",
   default: [] as ClassData[],
 });
+
+
+export { classState }
