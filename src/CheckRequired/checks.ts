@@ -19,7 +19,7 @@ const checkCS = (classList: [string]): boolean => {
     classList.filter((el) => el !== "CS 137");
     return false;
   }
-  if (!classList.includes("CS 1188")) {
+  if (!classList.includes("CS 188")) {
     classList.filter((el) => el !== "CS 188");
     return false;
   }
