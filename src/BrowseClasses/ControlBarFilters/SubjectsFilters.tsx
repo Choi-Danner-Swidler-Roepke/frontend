@@ -11,31 +11,22 @@ interface SubjectsFilterProps {
 export const SubjectsFilter: React.FC<SubjectsFilterProps> = ({subjects, params, setParams}) => {
     // only allows for 1 subject to be selected at a time.
 
-    console.log(subjects)
-
     return (
-        <>
-            {/* <div id="checkbox-group">
-
-                <input type="checkbox" name="MATH" value="MATH" />
-                <label htmlFor="MATH">Math</label>
-
-                <input type="checkbox" name="CS" value="CS" />
-                <label htmlFor="CS">CS</label>
-            </div> */}
-            
-            <select name="Subject" 
+        <div id="subjectSelectWrapper">
+            <label htmlFor="SubjectFilter">Subject: </label>
+            <select id="SubjectFilter"
                 onChange={(event) => {
-                    // setSelectedValue(event.target.value)
-                    setParams({...params, subject:[event.target.value] })
+                    setParams({...params, subject:event.target.value })
                 }}
+                defaultValue="All"
 
             >
+                <option value="">All</option>
                 {subjects.map((sub) => {
-                    return <option value={sub}>{sub}</option>
+                    return <option key={sub} value={sub}>{sub}</option>
                 })}
                 
             </select>
-        </>
+        </div>
     )
 }
