@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
 import { ClassData, ClassDataFilter } from "../Types";
 import { isFilterEmpty } from "./Utils";
+import { classState } from "../recoil/classData"
 
 interface  FetchClassesReturn{
     fetchedData: ClassData[]
@@ -16,7 +18,7 @@ const useFetchClasses = (filterParams: ClassDataFilter): FetchClassesReturn => {
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isError, setError] = useState<string>("")
-    const [fetchedData, setFetchedData] = useState<ClassData[]>([])
+    const [fetchedData, setFetchedData] = useRecoilState<ClassData[]>(classState)
 
     // if filterParams, then post request
     // else get request
@@ -33,34 +35,8 @@ const useFetchClasses = (filterParams: ClassDataFilter): FetchClassesReturn => {
                 console.log(error)
             }
         }
-
-        async function getFilteredData(){
-            try {
-                setIsLoading(true)
-                const response = await fetch('https://fhzfdbup3c.execute-api.us-east-1.amazonaws.com/dev/new/filter', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(filterParams)
-                })
-                const resData = await response.json()
-
-                setFetchedData(resData)
-                setIsLoading(false)
-            } catch (error) {
-                console.log(error)
-            }
-
-        }
-
-        if (hasNoParams) {
-            getData()
-        } else {
-            console.log(filterParams)
-            getFilteredData()
-        }
-    }, [filterParams])
+        getData()
+    }, [])
 
     return {fetchedData, isLoading, isError}
 }
