@@ -14,6 +14,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
             { Header: 'CRN',            accessor: 'crn'       },
             { Header: 'Subject',        accessor: 'subject'   },
             { Header: 'Title',          accessor: 'title'     },
+            { Header: 'Campus',         accessor: 'campus'    },
             { Header: 'Course Number',  accessor: 'number'    },
             { Header: 'Days',           accessor: 'days'      },
             { Header: 'Instructor',     accessor: 'instructor'}

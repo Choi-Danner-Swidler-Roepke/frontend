@@ -7,7 +7,8 @@ interface ClassData {
     credit: number
     title: string
     days: string
-    time: string
+    start_time: string
+    end_time: string
     capacity: number
     actual: number
     remaining: number
@@ -19,21 +20,21 @@ interface ClassData {
     xlRemaining: number
     instructor: string
     location: string
-    attribute?: string
+    attribute: string
     term: string
 }
 
 // this needs updated to reflect api 
 interface ClassDataFilter {
     // crn: number
-    subject: string[]
+    subject: string
     // course: number
     // section: number
-    campus: string[]
+    campus: string
     // credit: number
     // title: string
-    days: string[]
-    time: string[]
+    days: string
+    time: string
     // capacity: number
     // actual: number
     // remaining: number
@@ -43,9 +44,9 @@ interface ClassDataFilter {
     // xlCap: number
     // xlActual: number
     // xlRemaining: number
-    instructor: string[]
+    instructor: string
     // location: string
-    attribute: string[]
+    attribute: string
     // term: string
 }
 
