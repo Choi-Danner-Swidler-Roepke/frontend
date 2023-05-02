@@ -6,5 +6,10 @@ const classState = atom({
   default: [] as ClassData[],
 });
 
+const checkedData = atom({
+  key: "checkedData",
+  default: [] as ClassData[]
+})
+
 
 export { classState }
