@@ -19,16 +19,14 @@ export const ControlBar: React.FC<TableControlsProps> = ({uniqueVals, params, se
     }
     
     return (
-        <div id="controls-wrapper" className="w-full flex bg-green-500" >
-            <ul className="">
-                <li> <SubjectsFilter    subjects={uniqueVals.subjects}       params={params} setParams={setParams} /> </li>
-                <li> <CampusFilter      campuses={uniqueVals.campuses}       params={params} setParams={setParams} /> </li>
-                <li> <DaysFilter        days={uniqueVals.days}               params={params} setParams={setParams} /> </li>
-                <li> <TimesFilter       times={uniqueVals.times}             params={params} setParams={setParams} /> </li>
-                <li> <InstructorsFilter instructors={uniqueVals.instructors} params={params} setParams={setParams} /> </li>
-                <li> <AttributesFilter  attributes={uniqueVals.attributes}   params={params} setParams={setParams} /> </li>
-                <li><button className="bg-red-400" onClick={clearParams}>Clear Filter</button></li>
-            </ul>
-        </div>
+        <ul className="w-full max-w-full flex outline-dashed">
+            <li className="w-1/8"> <SubjectsFilter    subjects={uniqueVals.subjects}       params={params} setParams={setParams} /> </li>
+            <li> <CampusFilter      campuses={uniqueVals.campuses}       params={params} setParams={setParams} /> </li>
+            <li> <DaysFilter        days={uniqueVals.days}               params={params} setParams={setParams} /> </li>
+            <li> <TimesFilter       times={uniqueVals.times}             params={params} setParams={setParams} /> </li>
+            <li> <InstructorsFilter instructors={uniqueVals.instructors} params={params} setParams={setParams} /> </li>
+            <li className=""> <AttributesFilter  attributes={uniqueVals.attributes}   params={params} setParams={setParams} /> </li>
+            <li><button className="bg-red-400" onClick={clearParams}>Clear Filter</button></li>
+        </ul>
     )
 }

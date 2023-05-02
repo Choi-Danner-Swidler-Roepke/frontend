@@ -31,7 +31,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
    } = useTable({ columns, data }, useSortBy)
 
 return (
-     <div className='overflow-y-scroll w-full shadow-2xl'>
+     <div className='w-full shadow-2xl'>
 
       <table {...getTableProps()} className="w-full">
         <thead>

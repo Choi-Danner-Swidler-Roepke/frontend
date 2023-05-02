@@ -11,9 +11,11 @@ export const AttributesFilter: React.FC<AttributeFilterProps> = ({attributes, pa
     // only allows for 1 subject to be selected at a time.
 
     return (
-        <div id="attributesSelectWrapper">
+        <div id="attributesSelectWrapper" className="flex w-full">
             <label htmlFor="AttributesSelect">Attributes: </label>
-            <select id="AttributesSelect" 
+            <select 
+                className="w-1/2"
+                id="AttributesSelect" 
                 onChange={(event) => {
                     setParams({...params, attribute: event.target.value}) 
                     }

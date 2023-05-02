@@ -78,7 +78,7 @@ export const BCPage: React.FC = () => {
                     </h2>
                 </div> 
 
-            <div className="mx-24 bg-slate-300 flex flex-col justify-center items-center h-5/6 w-5/6 order-3 basis-full outline-dashed outline-4">
+            <div className="mx-24 bg-slate-300 flex flex-col justify-center items-center h-5/6 w-5/6 basis-full order-3 mb-24">
                 {selectedData && controlBarVals &&
                     <>
                         <ControlBar uniqueVals={controlBarVals} params={params} setParams={setParams} /> 
