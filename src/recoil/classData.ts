@@ -12,4 +12,4 @@ const checkedData = atom({
 })
 
 
-export { classState }
+export { classState, checkedData }
