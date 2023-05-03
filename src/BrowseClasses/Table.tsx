@@ -44,12 +44,14 @@ export const Table: React.FC<TableProps> = ({data}) => {
   // Accessor: Corresponding definition in Types.ts
   const columns: Column[] = useMemo(
       () => [
-          { Header: 'CRN',            accessor: 'crn'       },
           { Header: 'Subject',        accessor: 'subject'   },
           { Header: 'Title',          accessor: 'title'     },
-          { Header: 'Campus',         accessor: 'campus'    },
           { Header: 'Course Number',  accessor: 'number'    },
+          { Header: 'CRN',            accessor: 'crn'       },
+          { Header: 'Campus',         accessor: 'campus'    },
           { Header: 'Days',           accessor: 'days'      },
+          { Header: 'Start',          accessor:  'start_time'},
+          { Header: 'End',            accessor:  'end_time'},
           { Header: 'Instructor',     accessor: 'instructor'},
       ],
       []
@@ -64,22 +66,22 @@ export const Table: React.FC<TableProps> = ({data}) => {
   } = useTable({ columns, data }, useSortBy)
 
 return (
-     <div className='w-full shadow-2xl'>
+     <div className='w-full shadow-2xl text-black p-2  bg-gray-700 rounded-lg'>
 
-      <table {...getTableProps()} className="w-full">
+      <table {...getTableProps()} className="w-full border-collapse text-center">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
                 <th
                   {...column.getHeaderProps()}
-                    className='bg-neutral-200'
+                    className='bg-neutral-200 border border-neutral-300, w-1/12'
                 >
                   {column.render('Header')}
                 </th>
               ))}
               {/* checkbox column */}
-              <th className='bg-neutral-200'>Add Class</th>
+              <th className='bg-neutral-200 border border-neutral-300 w-1/12'>Add Class</th>
             </tr>
           ))}
         </thead>
@@ -87,23 +89,28 @@ return (
           {rows.map((row, index) => {
             prepareRow(row)
             return (
-              <tr {...row.getRowProps()} className="bg-neutral-50 hover:bg-neutral-100 border overflow-auto">
+              <tr {...row.getRowProps()} className={`border border-neutral-300 ${index % 2 === 0 ? 'bg-neutral-50' : 'bg-neutral-200'} hover:bg-cyan-50`}>
               
                 {row.cells.map(cell => {
                   return (
                     <td
                       {...cell.getCellProps()}
-                      className="border px-2 shadow-xl"
+                      className='border-x border-x-neutral-300'
                     >
                       {cell.render('Cell')}
                     </td>
                   )
                 })}
                 {/* checkbox functionality for each row */}
-                <td><input type="checkbox"
-                  onChange={() => toggleClass(data[index])}
-                  checked={isChecked(data[index].id)}
-                /></td>
+                <td 
+                    className='border-x border-x-neutral-300'
+                >
+                  <input type="checkbox"
+                    className='w-full'
+                    onChange={() => toggleClass(data[index])}
+                    checked={isChecked(data[index].id)}
+                  />
+                </td>
               </tr>
             )
           })}

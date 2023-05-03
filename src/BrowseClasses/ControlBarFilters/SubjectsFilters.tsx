@@ -13,8 +13,9 @@ export const SubjectsFilter: React.FC<SubjectsFilterProps> = ({subjects, params,
 
     return (
         <div id="subjectSelectWrapper">
-            <label htmlFor="SubjectFilter">Subject: </label>
+            <label htmlFor="SubjectFilter" className="underline decoration-cyan-500 font-bold">Subject: </label>
             <select id="SubjectFilter"
+                className="w-full bg-neutral-50 text-black outline-none rounded-sm focus:outline-cyan-600 focus:ring-cyan-600 focus:border-blue-500"
                 onChange={(event) => {
                     setParams({...params, subject:event.target.value })
                 }}

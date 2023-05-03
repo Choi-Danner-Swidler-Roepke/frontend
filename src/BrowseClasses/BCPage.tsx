@@ -71,12 +71,13 @@ export const BCPage: React.FC = () => {
                     <h1 className="md:text-5xl text-2xl w-full font-bold md:leading-tight leading-snug text-cyan-600">
                         Browse Classes
                     </h1>
-                    <h2 className="text-black md:w-2/3 md:py-1 leading-relaxed justify-start">
-                        View and select classes for next semester
+                    <h2 className="text-black leading-relaxed justify-start">
+                        View, filter, and select classes for next semester. <br />
+                        Add classes with the checkbox, then view them in the scheudle tab.
                     </h2>
                 </div> 
 
-            <div className="mx-24 bg-slate-300 flex flex-col justify-center items-center h-5/6 w-5/6 basis-full order-3 mb-24">
+            <div className="mx-24 flex flex-col justify-center items-center h-5/6 w-5/6 basis-full order-3 mb-24">
                 {selectedData && controlBarVals &&
                     <>
                         <ControlBar uniqueVals={controlBarVals} params={params} setParams={setParams} /> 

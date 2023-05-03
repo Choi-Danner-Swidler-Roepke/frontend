@@ -19,14 +19,16 @@ export const ControlBar: React.FC<TableControlsProps> = ({uniqueVals, params, se
     }
     
     return (
-        <ul className="w-full max-w-full flex outline-dashed">
-            <li className="w-1/8"> <SubjectsFilter    subjects={uniqueVals.subjects}       params={params} setParams={setParams} /> </li>
-            <li> <CampusFilter      campuses={uniqueVals.campuses}       params={params} setParams={setParams} /> </li>
-            <li> <DaysFilter        days={uniqueVals.days}               params={params} setParams={setParams} /> </li>
-            <li> <TimesFilter       times={uniqueVals.times}             params={params} setParams={setParams} /> </li>
-            <li> <InstructorsFilter instructors={uniqueVals.instructors} params={params} setParams={setParams} /> </li>
-            <li className=""> <AttributesFilter  attributes={uniqueVals.attributes}   params={params} setParams={setParams} /> </li>
-            <li><button className="bg-red-400" onClick={clearParams}>Clear Filter</button></li>
-        </ul>
+        <div id="wrapper" className="w-full p-2 border-2 bg-gray-700 rounded-lg mb-4 shadow-xl text-white sticky">
+            <ul className="w-full max-w-full flex bg-gray-700 rounded-lg">
+                <li className="w-1/6 mx-1"> <SubjectsFilter    subjects={uniqueVals.subjects}       params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <CampusFilter      campuses={uniqueVals.campuses}       params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <DaysFilter        days={uniqueVals.days}               params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <TimesFilter       times={uniqueVals.times}             params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <InstructorsFilter instructors={uniqueVals.instructors} params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <AttributesFilter  attributes={uniqueVals.attributes}   params={params} setParams={setParams} /> </li>
+                <li className="w-1/6 mx-1"> <button className="bg-red-700 w-full h-full rounded-md hover:bg-red-500" onClick={clearParams}>Clear Filter</button></li>
+            </ul>
+        </div>
     )
 }
