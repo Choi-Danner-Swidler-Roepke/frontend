@@ -68,7 +68,7 @@ export const Table: React.FC<TableProps> = ({data}) => {
 return (
      <div className='w-full shadow-2xl text-black p-2  bg-gray-700 rounded-lg'>
 
-      <table {...getTableProps()} className="w-full border-collapse">
+      <table {...getTableProps()} className="w-full border-collapse text-center">
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
