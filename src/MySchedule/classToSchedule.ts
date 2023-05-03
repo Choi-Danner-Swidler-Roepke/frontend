@@ -1,6 +1,6 @@
 import { ClassData, ScheduleData } from "../Types";
 
-export const classToSchedule = (classData: ClassData): ScheduleData => {
+export const classToSchedule = (classData: any): ScheduleData => {
   const days: [number] = [0];
   classData.days.split("").forEach((el) => {
     if (el === "M") days.push(1);

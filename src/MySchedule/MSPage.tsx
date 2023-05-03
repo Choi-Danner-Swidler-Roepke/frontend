@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import { useRecoilState } from "recoil";
+import { checkedData, scheduleData } from "../recoil/classData";
+import { classToSchedule } from "./classToSchedule";
+import { ScheduleData } from "../Types";
 
 // Hardcoded events as an example
 // Substitute these with data from the classes selected to make a proper schedule
 // To do this, add events={events} to the FullCalendar component
 // id field is for backend only, title is what shows up on the schedule
-const events = [
-  {
-    title: "CS 66: Introduction to Computer Science II",
-    startTime: "09:20:00",
-    startRecur: "2023-08-28",
-    endTime: "11:19:00",
-    endRecur: "2023-12-28",
-    color: "purple",
-    daysOfWeek: [2, 4],
-  },
-  {
-    title: "event 2",
-    start: "2023-04-12T13:00:00",
-    end: "2023-04-12T18:00:00",
-  },
-];
 
 export const MSPage: React.FC = () => {
+  const [classData, setClassData] = useRecoilState(checkedData);
+  const [scheduledData, setSechduledData] = useRecoilState(scheduleData);
+  useEffect(() => {
+    async function getData() {
+      try {
+        const data = classData;
+        let target: any = [];
+        classData.forEach((el) => {
+          target.push(classToSchedule(el));
+        });
+        setSechduledData(target);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getData();
+  }, [classData]);
   return (
     <div className="flex md:flex-row gap-3 pt-5 px-24 flex-wrap gap-y-10 bg-gray-200 h-0.8 order-1">
       {/* This div is the header and subtitle for the page */}
@@ -48,7 +53,7 @@ export const MSPage: React.FC = () => {
           slotMinTime={"06:00:00"}
           slotMaxTime={"22:00:00"}
           allDaySlot={false}
-          events={events}
+          events={scheduledData}
         />
       </div>
     </div>
