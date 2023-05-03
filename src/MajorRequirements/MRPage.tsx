@@ -112,7 +112,8 @@ export const MRPage: React.FC = () => {
             <div className="flex flex-wrap order-5 basis-full">
                 <div className="flex-col w-full">
                     <FormLabel>
-                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">Core Classes </span>Only one of MATH54 and MATH101 is required
+                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">Core Classes</span>
+                        <br /> Only one of MATH54 and MATH101 is required
                     </FormLabel>
                 </div>
                 <FormGroup>
@@ -155,8 +156,8 @@ export const MRPage: React.FC = () => {
                         
                 <div className="flex-col w-full">
                     <FormLabel>
-                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">CS Upper-Division Component (9 hours) </span>
-                        This includes IS145, IS150, and IS160 and excludes CS140, Tutoring course, and Capstone course
+                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">CS Upper-Division Component (9 hours)</span>
+                        <br /> This includes IS145, IS150, and IS160 and excludes CS140, Tutoring course, and Capstone course
                     </FormLabel>
                 </div>
                 <FormGroup>
@@ -175,8 +176,8 @@ export const MRPage: React.FC = () => {
                 
                 <div className="flex-col w-full">
                     <FormLabel>
-                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">Additional Upper-Division Component (6 hours) </span>
-                        Includes same classes as above, as well as upper-division courses in math, statistics, actuarial science, and quantitative methods
+                        <span className="font-bold md:leading-tight leading-snug text-cyan-600">Additional Upper-Division Component (6 hours)</span>
+                        <br />Includes same classes as above, as well as upper-division courses in math, statistics, actuarial science, and quantitative methods
                     </FormLabel>
                 </div>
                 <FormGroup>

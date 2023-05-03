@@ -73,7 +73,7 @@ export const BCPage: React.FC = () => {
                     </h1>
                     <h2 className="text-black leading-relaxed justify-start">
                         View, filter, and select classes for next semester. <br />
-                        Add classes with the checkbox, then view them in the scheudle tab.
+                        Add classes with the checkbox, then view them in the schedule tab.
                     </h2>
                 </div> 
 
