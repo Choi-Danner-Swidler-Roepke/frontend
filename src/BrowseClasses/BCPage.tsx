@@ -42,7 +42,6 @@ export const BCPage: React.FC = () => {
         if (isFilterEmpty(params)) {
             setSelectedData(immutableFetchedData)
         } else {
-            console.log('filtering')
             const filteredData = filterData(immutableFetchedData, params)
             setSelectedData(filteredData)
         }
@@ -62,7 +61,6 @@ export const BCPage: React.FC = () => {
             // init for new subject
             const filteredData = filterData(immutableFetchedData, params)
             setControlBarVals(getUniqueForControlBar(filteredData))
-            console.log('params.subejct chanbged')
         }
      }, [params.subject])
 

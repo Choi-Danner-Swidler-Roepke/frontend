@@ -1,4 +1,5 @@
 interface ClassData {
+  id: number;
   crn: number;
   subject: string;
   course: number;
