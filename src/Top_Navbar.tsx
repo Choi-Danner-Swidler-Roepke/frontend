@@ -12,7 +12,7 @@ export const Top_Navbar: React.FC = () => {
   ];
   return (
     <div className='flex justify-between items-center h-24 w-full mx-auto px-4 bg-gray-700 text-white dropshadow-md'>
-      <img src="./src/assets/new_logo.png"/>
+      <img src="/assets/new_logo.png"/>
       <h1 className='w-full px-2 text-3xl font-bold text-cyan-600'>REGISTRATION APPLICATION.</h1>
       <ul className='hidden md:flex'>
         {Menus.map((Menu, index) => (

@@ -109,7 +109,7 @@ export const MRPage: React.FC = () => {
                 </h3>
             </div>
         {/* Show Required Classes */}
-            <div className="flex flex-wrap order-5 basis-full">
+            <div className="flex flex-wrap order-5 basis-full mb-24">
                 <div className="flex-col w-full">
                     <FormLabel>
                         <span className="font-bold md:leading-tight leading-snug text-cyan-600">Core Classes</span>

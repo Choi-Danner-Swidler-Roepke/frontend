@@ -13,7 +13,7 @@ export const RIPage: React.FC = () => {
 
             {/* This div is the registration times table */}
                 <div className="flex drop-shadow-lg order-2 flex-justify h-full">
-                    <img src="./src/assets/Registrationtimes.png" alt="regTable" className=""></img>
+                    <img src="/assets/Registrationtimes.png" alt="regTable" className=""></img>
                 </div> 
 
             

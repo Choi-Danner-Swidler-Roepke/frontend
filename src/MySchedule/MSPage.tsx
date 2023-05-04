@@ -42,7 +42,7 @@ export const MSPage: React.FC = () => {
         </h2>
       </div>
       {/* This div is the schedule component */}
-      <div className="flex drop-shadow-md w-screen order-2 overflow-y-scroll">
+      <div className="flex drop-shadow-md w-screen order-2 overflow-y-scroll mb-24">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin]}
           initialView="timeGridWeek"

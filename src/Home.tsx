@@ -34,7 +34,7 @@ export const Home: React.FC = () => {
           {/* Hero Section */}
             <div className="min-h-screen flex py-10 md:flex-row flex-col items-center">
               <div className="flex-1 flex items-center justify-center h-full">
-                <img src="./src/assets/griff_home_5.jpeg" alt="" className="md:w-11/12 h-full object-cover drop-shadow-2xl rounded-xl" />
+                <img src="/assets/griff_home_5.jpeg" alt="" className="md:w-11/12 h-full object-cover drop-shadow-2xl rounded-xl" />
               </div>
 
               <div className="flex-1">
@@ -69,7 +69,7 @@ export const Home: React.FC = () => {
               </div>
                 <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
                   <div className="lg:w-96 h-full relative sm:w-10/12 w-11/12 max-w-sm">
-                    <img src="./src/assets/griff_home_2.jpeg" alt="" className="w-full object-cover bg-cyan-600 rounded-xl drop-shadow-2xl"/>
+                    <img src="/assets/griff_home_2.jpeg" alt="" className="w-full object-cover bg-cyan-600 rounded-xl drop-shadow-2xl"/>
                   </div>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export const Home: React.FC = () => {
                 Website Tutorial
               </h3>
             </div>
-            <div className="bg-gray-700 relative px-8 rounded-2xl lg:max-w-4xl mx-auto min-h-[24rem] flex gap-6 lg:flex-row flex-col-reverse items-center">
+            <div className="bg-gray-700 relative px-8 rounded-2xl lg:max-w-4xl mx-auto min-h-[24rem] flex gap-6 lg:flex-row flex-col-reverse items-center mb-24">
               <div>
                 <h2 className="text-2xl font-bold">
                   How does this site work?
@@ -93,7 +93,7 @@ export const Home: React.FC = () => {
                   and the <span className="text-cyan-600">Registration</span> page to find the day to make things official!
                 </p>
               </div>
-              <img src="./src/assets/griff_home_3.png" alt="" className="lg:h-[32rem] h-80 lg:absolute bottom-0 -right-16 object-cover"/>
+              <img src="/assets/griff_home_3.png" alt="" className="lg:h-[32rem] h-80 lg:absolute bottom-0 -right-16 object-cover"/>
             </div>
 
           {/* Footer */}
