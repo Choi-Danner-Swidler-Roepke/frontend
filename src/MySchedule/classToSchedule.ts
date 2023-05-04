@@ -2,7 +2,7 @@ import { ClassData, ScheduleData } from "../Types";
 
 export const classToSchedule = (classData: any): ScheduleData => {
   const days: [number] = [0];
-  classData.days.split("").forEach((el) => {
+  classData.days.split("").forEach((el: string) => {
     if (el === "M") days.push(1);
     if (el === "T") days.push(2);
     if (el === "W") days.push(3);
